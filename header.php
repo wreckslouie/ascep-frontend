@@ -24,6 +24,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/inc/css/main.css">
 
 <?php wp_head(); ?>
 
@@ -34,7 +35,6 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<nav class="navbar navbar-default" role="navigation">
-			<div class="container">
 				<div class="row">
 					<div class="site-navigation-inner col-sm-12">
 						<div class="navbar-header">
@@ -65,10 +65,14 @@
 						<?php sparkling_header_menu(); // main navigation ?>
 					</div>
 				</div>
-			</div>
 		</nav><!-- .site-navigation -->
 	</header><!-- #masthead -->
-
+	<?php
+		if ( is_front_page() ) {	
+			echo do_shortcode("[metaslider id=28]"); 
+	    }
+	    	
+	?>
 	<div id="content" class="site-content">
 
 		<div class="top-section">

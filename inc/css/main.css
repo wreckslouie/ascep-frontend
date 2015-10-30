@@ -1,0 +1,53 @@
+/* HEADER CSS */
+html{
+	overflow-x: hidden;
+}
+#masthead{
+}
+
+#masthead nav{
+	background: none;
+	height: 3.25em;
+}
+
+#masthead .navbar-brand{
+	color: #1e5ba3;
+}
+
+#masthead .nav.navbar-nav{
+	padding-top: 6px;
+}
+
+#masthead .navbar-default .navbar-nav > li > a{
+	color: rgba(30, 91, 163, 0.6);
+	line-height: normal;
+	padding: 10px 20px;
+}
+
+#masthead .navbar-default .navbar-nav > .active > a, 
+#masthead .navbar-default .navbar-nav > .active > a:hover, 
+#masthead .navbar-default .navbar-nav > .active > a:focus, 
+#masthead .navbar-default .navbar-nav > li > a:hover, 
+#masthead .navbar-default .navbar-nav > li > a:focus, 
+#masthead .navbar-default .navbar-nav > .open > a, 
+#masthead .navbar-default .navbar-nav > .open > a:hover, 
+#masthead .navbar-default .navbar-nav > .open > a:focus{
+	color: #1e5ba3;
+}
+
+
+#masthead .navbar-default .navbar-nav > li:last-child > a{
+	color: #fff;
+    background: #1e5ba3;
+    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.5);
+    -o-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+/* HOMEPAGE CSS */
+.full-width-bg{
+	background-size: cover !important;
+	background-position: center!important;
+}

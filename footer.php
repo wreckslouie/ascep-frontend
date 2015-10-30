@@ -37,7 +37,12 @@
 	</div>
 </div><!-- #page -->
 
+	<script src="<?php bloginfo('template_directory'); ?>/inc/js/custom/jquery.min.js"></script>
 <?php wp_footer(); ?>
 
+	<!-- Scripts -->
+	<script src="<?php bloginfo('template_directory'); ?>/inc/js/custom/skel.min.js"></script>
+	<!--[if lte IE 8]><script src="<?php bloginfo('template_directory'); ?>/inc/js/custom/ie/respond.min.js"></script><![endif]-->
+	<script src="<?php bloginfo('template_directory'); ?>/inc/js/custom/main.js"></script>
 </body>
 </html>

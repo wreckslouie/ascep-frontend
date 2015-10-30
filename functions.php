@@ -345,3 +345,12 @@ function of_get_option( $name, $default = false ) {
 	return $default;
 }
 endif;
+
+
+/**
+ * Add Excerpt to Pages.
+ */
+add_action( 'init', 'add_excerpt_to_pages' );
+function add_excerpt_to_pages() {
+     add_post_type_support( 'page', 'excerpt' );
+}
