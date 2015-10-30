@@ -1,3 +1,27 @@
+/*========= About Project =========*/
+
+Install Meta Slider Plugin
+https://wordpress.org/plugins/ml-slider/
+
+Install Team Members Plugin
+https://wordpress.org/plugins/team-members/
+
+Allow Excerpts in Screen Options of Page
+
+Create Home Page
+- Create Our Mission Page
+- Create Latest Activities Page
+
+Create new menu(Appearance > Menu)
+- Set new menu as Primary Menu
+
+page-home.php
+Change corresponding Page IDs for Mission and Latest Pages
+Change shortcodes corresponding the team  shortcodes
+
+header.php
+Change metaslider ID based on Meta slider setup
+
 /*========= About Theme =========*/
 
 Theme Name: Sparkling
