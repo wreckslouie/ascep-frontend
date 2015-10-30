@@ -53,7 +53,7 @@ get_header(); ?>
 </div>
 		
 <?php
-	$mission_page = 43;
+	$mission_page = 7;
 	$mission_data = get_page( $mission_page );
 ?>
 <div class = "full-width-bg " style = "background: url(<?php echo wp_get_attachment_url( get_post_thumbnail_id($mission_page) );?>) no-repeat;">
@@ -78,7 +78,7 @@ get_header(); ?>
 </div>
 
 <?php
-	$latest_page = 33;
+	$latest_page = 9;
 	$latest_data = get_page( $latest_page );
 ?>
 <div id="content" class="site-content">
