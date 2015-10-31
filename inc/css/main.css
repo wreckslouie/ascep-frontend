@@ -2,15 +2,85 @@
 html{
 	overflow-x: hidden;
 }
-#masthead{
+
+body{
+	background-color: #fff !important;
+}
+
+@-moz-keyframes reveal-header {
+	0% {
+		top: -5em;
+	}
+
+	100% {
+		top: 0;
+	}
+}
+
+@-webkit-keyframes reveal-header {
+	0% {
+		top: -5em;
+	}
+
+	100% {
+		top: 0;
+	}
+}
+
+@-ms-keyframes reveal-header {
+	0% {
+		top: -5em;
+	}
+
+	100% {
+		top: 0;
+	}
+}
+
+@keyframes reveal-header {
+	0% {
+		top: -5em;
+	}
+
+	100% {
+		top: 0;
+	}
+}
+
+/* COMMONS */
+.center-text {
+	text-align: center;
+}
+
+.blue{
+	color: #1e5ba3 !important;
+}
+.left-text {
+	text-align: left;
+}
+.right-text {
+	text-align: right;
+}
+
+.no-margin-bottom{
+	margin-bottom: 0 !important;
 }
 
 #masthead nav{
-	background: none;
+	background: #1e5ba3;
+	height: 3.25em;
+}
+
+#masthead.alt nav{
+	background: #fff;
 	height: 3.25em;
 }
 
 #masthead .navbar-brand{
+	color: #fff;
+}
+
+#masthead.alt .navbar-brand{
 	color: #1e5ba3;
 }
 
@@ -19,7 +89,7 @@ html{
 }
 
 #masthead .navbar-default .navbar-nav > li > a{
-	color: rgba(30, 91, 163, 0.6);
+	color: rgba(255, 255, 255, 0.6);
 	line-height: normal;
 	padding: 10px 20px;
 }
@@ -32,11 +102,28 @@ html{
 #masthead .navbar-default .navbar-nav > .open > a, 
 #masthead .navbar-default .navbar-nav > .open > a:hover, 
 #masthead .navbar-default .navbar-nav > .open > a:focus{
+	color: #fff;
+}
+
+/* DEFAULT NAV */
+#masthead.alt .navbar-default .navbar-nav > li > a{
+	color: rgba(30, 91, 163, 0.6);
+	line-height: normal;
+	padding: 10px 20px;
+}
+
+#masthead.alt .navbar-default .navbar-nav > .active > a, 
+#masthead.alt .navbar-default .navbar-nav > .active > a:hover, 
+#masthead.alt .navbar-default .navbar-nav > .active > a:focus, 
+#masthead.alt .navbar-default .navbar-nav > li > a:hover, 
+#masthead.alt .navbar-default .navbar-nav > li > a:focus, 
+#masthead.alt .navbar-default .navbar-nav > .open > a, 
+#masthead.alt .navbar-default .navbar-nav > .open > a:hover, 
+#masthead.alt .navbar-default .navbar-nav > .open > a:focus{
 	color: #1e5ba3;
 }
 
-
-#masthead .navbar-default .navbar-nav > li:last-child > a{
+#masthead.alt .navbar-default .navbar-nav > li:last-child > a{
 	color: #fff;
     background: #1e5ba3;
     box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.5);
@@ -46,8 +133,209 @@ html{
     border-radius: 5px;
 }
 
+#masthead .navbar-default .navbar-nav > li:last-child > a{
+	color: #1e5ba3;
+    background: #fff;
+    box-shadow: inset 0 0 0 2px rgba(187, 187, 187, 0.5);
+    -o-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#masthead.alt .navbar-default .navbar-nav > li:last-child.active > a, 
+#masthead.alt .navbar-default .navbar-nav > li:last-child.active > a:hover, 
+#masthead.alt .navbar-default .navbar-nav > li:last-child.active > a:focus, 
+#masthead.alt .navbar-default .navbar-nav > li:last-child > a:hover, 
+#masthead.alt .navbar-default .navbar-nav > li:last-child > a:focus {
+	color: #fff;
+}
+
+#masthead .navbar-default .navbar-nav > li:last-child.active > a, 
+#masthead .navbar-default .navbar-nav > li:last-child.active > a:hover, 
+#masthead .navbar-default .navbar-nav > li:last-child.active > a:focus, 
+#masthead .navbar-default .navbar-nav > li:last-child > a:hover, 
+#masthead .navbar-default .navbar-nav > li:last-child > a:focus {
+	color: #1e5ba3;
+}
+
+#masthead {
+	background: #014995;
+	color: #bbb;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 10000;
+}
+
+
+#masthead nav {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	vertical-align: middle;
+}
+
+#masthead.reveal {
+	-moz-animation: reveal-header 0.5s;
+	-webkit-animation: reveal-header 0.5s;
+	-ms-animation: reveal-header 0.5s;
+	animation: reveal-header 0.5s;
+}
+
+#masthead.alt {
+	-moz-animation: none;
+	-webkit-animation: none;
+	-ms-animation: none;
+	animation: none;
+	background: none;
+	color: #666;
+	position: absolute;
+}
+
 /* HOMEPAGE CSS */
 .full-width-bg{
 	background-size: cover !important;
 	background-position: center!important;
+}
+
+.full-width-bg.team{
+	background: #f5f5f5;
+}
+
+.full-width-bg h2{
+	color: #fff;
+}
+
+.full-width-bg p{
+	color: #cccccc;
+}
+
+/* SLIDER */
+.metaslider .rslides .caption-wrap{
+	width: 100%;
+	top: 35%;
+	background: none;
+	text-align: center;
+	opacity: 1;
+}
+
+.metaslider .rslides .caption-wrap h1{
+	color: #fff;
+	font-size: 360%;
+	text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.14);
+}
+
+.metaslider .rslides .caption-wrap h3{
+	color: #fff;
+	font-weight: 300;
+	font-size: 100%;
+	width: 50%;
+	margin: 10px auto 0;
+    line-height: 1.4;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.14);
+}
+
+/* Call to Action Buttons */
+.button-common{
+	color: #fff;
+    background: #1e5ba3;
+    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.5);
+    -o-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding:15px 0px;
+    position: relative;
+    display: block;
+    width: 200px;
+    margin: 30px auto;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.button-common.large{
+	font-size: 120%;
+}
+
+.button-common.small{
+	font-size: 12px;
+    padding:10px 0px;
+    width: 150px;
+}
+
+/* CONTENT */
+.subhead-red{
+	color: 222;
+	font-weight: 600;
+	text-align: center;
+	margin-bottom: 30px;
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #cccccc;
+}
+
+#content .row{
+	padding: 30px 0;
+}
+
+/* FACULTY HOME */
+.faculty-home h2{
+	margin-bottom: 30px;
+
+}
+
+.faculty-home .lead h2{
+
+}
+
+.faculty-home .lead .tmm .tmm_member .tmm_photo{
+	float: left;
+	margin-top: 25px;
+	margin-left: 30px !important;
+	margin-right: 30px !important;
+	width: 200px;
+	height: 200px;
+	box-shadow: none !important;
+}
+
+.faculty-home .lead .tmm .tmm_2_columns .tmm_member{
+	width: 100% !important;
+	margin: 0;
+	border: none !important;
+	box-shadow: none !important;
+	background: none;
+}
+
+.faculty-home .lead .tmm .tmm_member .tmm_textblock{
+	text-align: left !important;
+	width: 70%;
+	float: left;
+}
+
+.faculty-home .tmm .tmm_3_columns .tmm_member{
+	border: none !important;
+    border-radius: 3px;
+    box-shadow: 0px 0px 12px 0px rgba(173, 173, 173, 0.2);
+}
+
+/* TEAM MEMBER */
+.page .tmm .tmm_member .tmm_photo{
+	border-radius: 500px !important;
+	border: none;
+}
+
+#footer-area{
+	background: #004a91 !important; 
+}
+
+#colophon{
+	border-top: #0b518b !important;
+	background: #024073 !important;
+}
+
+#footer-area ul li {
+    border-bottom: none !important;
 }

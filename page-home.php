@@ -11,14 +11,14 @@ get_header(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 
 		<div class="col-md-5">
-			<?php the_post_thumbnail( 'sparkling-featured', array( 'class' => 'single-featured' )); ?>
+			<?php the_post_thumbnail( 'full', array( 'class' => 'single-featured' )); ?>
 		</div>
 
 		<div class="col-md-7">
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 				<header class="entry-header page-header">
-					<h1 class="entry-title"><?php the_title(); ?></h1>
+					<h1 class="entry-title center-text no-margin-bottom"><?php the_title(); ?></h1>
 				</header><!-- .entry-header -->
 
 				<div class="entry-content">
@@ -66,9 +66,9 @@ get_header(); ?>
 			<div class = "row">	
 				<div class="col-md-7">
 					<h2><?php echo $mission_data->post_title; ?></h2>
-					<p><?php echo $mission_data->post_content; ?>
+					<p><?php echo $mission_data->post_excerpt; ?>
 					</p>
-					<a href = "<?php echo $mission_data->guid; ?>">Learn More</a>
+					<a href = "<?php echo $mission_data->guid; ?>" class = "button-common small">Learn More</a>
 				</div>
 
 
@@ -81,6 +81,7 @@ get_header(); ?>
 	$latest_page = 33;
 	$latest_data = get_page( $latest_page );
 ?>
+
 <div id="content" class="site-content">
 	<div class="container main-content-area">
 		<div class = "row">
@@ -89,17 +90,51 @@ get_header(); ?>
 			</div>
 			<div class="col-md-7">
 					<h2><?php echo $latest_data->post_title; ?></h2>
-					<p><?php echo $latest_data->post_content; ?>
+					<p><?php echo $latest_data->post_excerpt; ?>
 					</p>
-					<a href = "<?php echo $latest_data->guid; ?>">Learn More</a>
+					<a href = "<?php echo $latest_data->guid; ?>" class = "button-common small">Learn More</a>
 			</div>
+		</div>
 
+			
+		<div class = "row faculty-home lead">
+			<div class="col-md-12">
+			</div>
+		</div>
+	</div>
+</div>
 
-			<?php
-				if ( is_front_page() ) {	
-					echo do_shortcode("[tmm name=faculty-and-staff]"); 
-			    }
-				    	
-			?>
+<div class = "full-width-bg team" style = "">
+	<div id="content" class="site-content">
+		<div class="container main-content-area">
+			<div class = "row faculty-home">
+				<div class="col-md-12 lead">
+					<?php
+						if ( is_front_page() ) {	
+							echo do_shortcode("[tmm name=principal]"); 
+					    }
+					?>
+				</div>
+				<div class="col-md-12">
+					<?php
+						$faculty_page = 12;
+						$faculty_data = get_page( $faculty_page );
+					?>
+
+					<h2 class= "center-text blue"><?php echo $faculty_data->post_title; ?></h2>
+
+					<?php
+						if ( is_front_page() ) {	
+							echo do_shortcode("[tmm name=faculty-and-staff]"); 
+					    }
+					?>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 		
+<div>
+	<div >
+		<div >
 <?php get_footer(); ?>

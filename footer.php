@@ -28,7 +28,7 @@
 					</nav>
 					<div class="copyright col-md-6">
 						<?php echo of_get_option( 'custom_footer_text', 'sparkling' ); ?>
-						<?php sparkling_footer_info(); ?>
+						
 					</div>
 				</div>
 			</div><!-- .site-info -->
@@ -42,6 +42,7 @@
 
 	<!-- Scripts -->
 	<script src="<?php bloginfo('template_directory'); ?>/inc/js/custom/skel.min.js"></script>
+	<script src="<?php bloginfo('template_directory'); ?>/inc/js/custom/jquery.scrollgress.min.js"></script>
 	<!--[if lte IE 8]><script src="<?php bloginfo('template_directory'); ?>/inc/js/custom/ie/respond.min.js"></script><![endif]-->
 	<script src="<?php bloginfo('template_directory'); ?>/inc/js/custom/main.js"></script>
 </body>

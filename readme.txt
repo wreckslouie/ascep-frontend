@@ -16,11 +16,19 @@ Create new menu(Appearance > Menu)
 - Set new menu as Primary Menu
 
 page-home.php
-Change corresponding Page IDs for Mission and Latest Pages
+Change corresponding Page IDs for Mission, Faculty and staff and Latest Pages
 Change shortcodes corresponding the team  shortcodes
 
 header.php
 Change metaslider ID based on Meta slider setup
+
+Choose R.Slides for Meta Slider
+
+Edit Footer in Appearance > Customize > Sparkling Options
+Edit Footer Widgets in Widgets
+ - First widget is meta slider
+ - Second widget is text
+ - 3rd Widget is menu
 
 /*========= About Theme =========*/
 
