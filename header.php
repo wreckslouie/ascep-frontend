@@ -69,7 +69,7 @@
 	</header><!-- #masthead -->
 	<?php
 		if ( is_front_page() ) {	
-			echo do_shortcode("[metaslider id=28]"); 
+			echo do_shortcode("[metaslider id=11]"); 
 	    }
 	    	
 	?>
